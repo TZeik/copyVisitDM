@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiar al Portapapeles</title>
+    <script>
+        function copiarTexto() {
+            const mensaje = "**__Ficha de Visitante__**
+> `-` **Nombre IG:**
+> `-` **Referencia (Jugador que conozcas):**
+> `-` **Razón de visita:**
+> `-` **¿Deseas realizar actividades con los demás miembros del gremio (A parte de los indicados en referencia)? [Sí/No]:**";
+            navigator.clipboard.writeText(mensaje).then(() => {
+                alert("Texto copiado al portapapeles!");
+            }).catch(err => {
+                console.error("Error al copiar el texto: ", err);
+            });
+        }
+        window.onload = copiarTexto;
+    </script>
+</head>
+<body>
+    <h1>Copiando texto al portapapeles...</h1>
+</body>
+</html>
